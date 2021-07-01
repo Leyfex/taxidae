@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Portfolio Website Project</title>
+        <style>
+        h1 {
+            margin: auto;
+            padding: 20px;
+            text-align: center;
+            color: whitesmoke;
+            
+            background: rgb(1, 63, 78)
+        }
+        
+        h2 {
+            text-align: center;
+            margin: auto;
+            color: white;
+            
+            padding: 20px;
+            background: rgb(177, 177, 177) ;
+                
+            }
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            width: 100%;
+            background: rgb(68, 84, 88);
+        }
+        
+        p {
+           
+        }
+      
+        .tablink {
+            background-color: #555;
+            color: white;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            font-size: 17px;
+            width: 25%;
+        }
+
+        .tablink:hover {
+            background-color: #777;
+        }
+
+/* Style the tab content (and add height:100% for full page content) */
+        .tabcontent {
+            color: white;
+            display: none;
+            padding: 100px 20px;
+            height: 100%;
+        }
+
+        #Home {background: rgb(1, 63, 78);}
+        #News {background: rgb(177, 177, 177);}
+        #Art {background: rgb(68, 84, 88);}
+        #About {background: rgb(55, 56, 56);}
+
+        * {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+        </style>
+    </head>
+    <body>
+    
+
+        
+        <h1>Taxidae</h1>
+        <h2>An online portfolio and working project</h2>
+    <!-- Tab links -->
+    <button class="tablink" onclick="openPage('Home', this, 'grey')" id = 'defaultOpen'>Home</button>
+    <button class="tablink" onclick="openPage('News', this, 'grey')">News</button>
+    <button class="tablink" onclick="openPage('Art', this, 'grey')">Art</button>
+    <button class="tablink" onclick="openPage('About', this, 'grey')">About</button>
+    
+    <div id="Home" class="tabcontent">
+      <h3>Welcome</h3>
+      <p> This will host:
+          <ul>
+              <li> a working demonstration of my progress in web development and coding</li>
+              <li>pieces of original artwork </li>
+              <li> brief writings on subject matters important to me</li>
+              <li> videos of my progress in game development</li>
+          </ul> 
+    </p>
+    </div>
+    
+    <div id="News" class="tabcontent">
+      <h3>News</h3>
+      <p>Some news this fine day!
+          <ul>
+              <li> June 27 2021: "On June 27, 1954, democratically elected Guatemalan president Jacobo Árbenz Guzmán<br> 
+                was deposed in a CIA-sponsored coup to protect the profits of the United Fruit Company.<br> 
+                Arbenz was replaced by decades of brutal U.S.-backed regimes who committed widespread torture and genocide."<br>
+                The director of the CIA Allen Dulles and his brother John Foster Dulles the Secretary of state at the time had both served<br>
+                 on Unite Fruit Company's Board (now: Chiquita Brands) of Trustees and owned shares of the company <br> 
+                 <a href = "https://www.zinnedproject.org/news/tdih/jacobo-arbenz-guzman-deposed/?fbclid=IwAR1FdB-RbphqWh_qHkwgn_4qvtwd7Szk69Myrl2h2dcY8IHtdPvE_HeGKGs"><i>Refrence: Zinn Education Project</i></a><br>
+                 <a href = "https://en.wikipedia.org/wiki/1954_Guatemalan_coup_d%27%C3%A9tat"><i>Wiki: 1954 Guatemalan coup d'etat</i></a>
+            </li>
+              <li> July 1 2021: Fuck Donald Rumsfeld and all other war criminals hidden by a sense of blind patriotism and the liberal notion of "tolerance"</li>
+          </ul>
+      </p>
+    </div>
+    
+    <div id="Art" class="tabcontent">
+      <h3>Art</h3>
+      <!-- Slideshow container -->
+<div class="slideshow-container">
+
+    <!-- Full-width images with number and caption text -->
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 4</div>
+      <img src="D:\Drawings\Nettle Life Cycle.png" style="width:100%">
+      <div class="text">A drwaing of the life cycle of a nettle</div>
+    </div>
+  
+    <div class="mySlides fade">
+      <div class="numbertext">2 / 4</div>
+      <img src="D:\Drawings\Poppy Life Cycle.png" style="width:100%">
+      <div class="text">A drawing of the life cycle of a California Poppy</div>
+    </div>
+  
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 4</div>
+      <img src="D:\Drawings\Signd crow.png" style="width:100%">
+      <div class="text">A drawing of a humanoid crow in a suit with</div>
+    </div>
+
+    <div class="mySlides fade">
+        <div class="numbertext">4 / 4</div>
+        <img src="D:\Drawings\Second Panel.png" style="width:100%">
+        <div class="text">A slide from a comic that remains a work in progress</div>
+      </div>
+  
+    <!-- Next and previous buttons -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+  <br>
+  
+  <!-- The dots/circles -->
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+  </div>
+    </div>
+    
+    <div id="About" class="tabcontent">
+      <h3>About</h3>
+      <p>For all online purposes I am "Taxidae"<br>
+        Taxidae comes from the latin name for the american badger <i>"Taxidae Taxus"</i>.<br>
+        I have a fondness for badgers, crows and folk punk music.<br>
+        Here is a link to my bandcamp: <a href ="https://trashbadger.bandcamp.com/album/badgers-bears-and-the-bourgeois"><span style ="color:white"><i><strong>Trash Badger: Badgers Bears and the Bourgeois</i></strong></span></a>
+
+    </p>
+    </div>
+    <script>
+  
+        function openPage(pageName, elmnt, color) {
+  
+  // Hide all elements with class="tabcontent" by default */
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  // Remove the background color of all tablinks/buttons
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+
+  // Show the specific tab content
+  document.getElementById(pageName).style.display = "block";
+
+  // Add the specific color to the button used to open the tab content
+  elmnt.style.backgroundColor = color;
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+
+    </script>
+       
+       
+    </body>
+</html>
