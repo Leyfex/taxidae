@@ -364,6 +364,15 @@ document.getElementById("defaultOpen").click();
 
 var slideIndex = 1;
 showSlides(slideIndex);
+        
+var slideshow1 = document.getElementById("slideshow1");
+slideshow1.currentSlideIndex = 1;
+showSlides(slideshow1.currentSlideIndex, slideshow1);
+
+var slideshow2 = document.getElementById("slideshow2");
+slideshow2.currentSlideIndex = 1;
+showSlides(slideshow2.currentSlideIndex, slideshow2);
+
 
 // Next/previous controls
 function plusSlides(n) {
@@ -375,14 +384,6 @@ function currentSlide(n) {
   showSlides(slideIndex = n);
 }
         
-var slideshow1 = document.getElementById("slideshow1");
-slideshow1.currentSlideIndex = 1;
-showSlides(slideshow1.currentSlideIndex, slideshow1);
-
-var slideshow2 = document.getElementById("slideshow2");
-slideshow2.currentSlideIndex = 1;
-showSlides(slideshow2.currentSlideIndex, slideshow2);
-
 function showSlides(n) {
   var i;
   var slides = document.getElementsByClassName("mySlides");
