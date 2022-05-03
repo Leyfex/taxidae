@@ -298,8 +298,8 @@
       </div>
   
     <!-- Next and previous buttons -->
-    <a class="prev" onclick="plusSlides(-1, this.parentNode)">&#10094;</a>
-    <a class="next" onclick="plusSlides(1, this.parentNode)">&#10095;</a>
+    <a class="prev" onclick="plusSlides(-1, slideshow2)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1, slideshow2)">&#10095;</a>
     </div>
 <br>
     
@@ -355,9 +355,6 @@
 
 // Get the element with id="defaultOpen" and click on it
 document.getElementById("defaultOpen").click();
-
-var slideIndex = 1;
-showSlides(slideIndex);
         
 var slideshow1 = document.getElementById("slideshow1");
 slideshow1.currentSlideIndex = 1;
@@ -369,29 +366,29 @@ showSlides(slideshow2.currentSlideIndex, slideshow2);
 
 
 // Next/previous controls
-function plusSlides(n) {
-  showSlides(slideIndex += n);
+function plusSlides(n, slideShow) {
+  showSlides(slideShow.currentSlideIndex += n, slideShow);
 }
 
 // Thumbnail image controls
-function currentSlide(n) {
-  showSlides(slideIndex = n);
+function currentSlide(n, slideShow) {
+  showSlides(slideShow.currentSlideIndex = n, slideShow);
 }
         
-function showSlides(n) {
+function showSlides(n, slideShow) {
   var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
+  var slides = slideShow.getElementsByClassName("mySlides");
+  var dots = slideShow.getElementsByClassName("dot");
+  if (n > slides.length) {slideShow.currentSlideIndex = 1}
+  if (n < 1) {slideShow.currentSlideIndex = slides.length}
   for (i = 0; i < slides.length; i++) {
       slides[i].style.display = "none";
   }
   for (i = 0; i < dots.length; i++) {
       dots[i].className = dots[i].className.replace(" active", "");
   }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
+  slides[slideShow.currentSlideIndex-1].style.display = "block";
+  dots[slideShow.currentSlideIndex-1].className += " active";
 }
 
     </script>
